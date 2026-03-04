@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="sc1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ebf8ff"/>
+      <stop offset="100%" stop-color="#bee3f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#sc1)" rx="12"/>
+  <!-- Compass / Direction icon -->
+  <circle cx="200" cy="120" r="55" fill="none" stroke="#2b6cb0" stroke-width="3" opacity="0.6"/>
+  <circle cx="200" cy="120" r="45" fill="none" stroke="#4299e1" stroke-width="2" opacity="0.4"/>
+  <polygon points="200,75 210,115 200,105 190,115" fill="#2b6cb0" opacity="0.8"/>
+  <polygon points="200,165 210,125 200,135 190,125" fill="#63b3ed" opacity="0.6"/>
+  <line x1="155" y1="120" x2="245" y2="120" stroke="#4299e1" stroke-width="1.5" opacity="0.4"/>
+  <!-- Stars / clarity dots -->
+  <circle cx="100" cy="60" r="4" fill="#4299e1" opacity="0.5"/>
+  <circle cx="320" cy="80" r="3" fill="#2b6cb0" opacity="0.4"/>
+  <circle cx="80" cy="200" r="5" fill="#63b3ed" opacity="0.3"/>
+  <circle cx="330" cy="190" r="4" fill="#4299e1" opacity="0.4"/>
+  <!-- Path / direction lines -->
+  <path d="M100,230 Q150,210 200,220 Q250,230 300,210 Q350,190 380,200" fill="none" stroke="#2b6cb0" stroke-width="2" opacity="0.3" stroke-dasharray="8,4"/>
+  <text x="200" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="16" font-weight="600" fill="#2c5282">Clarity &amp; Direction</text>
+</svg>

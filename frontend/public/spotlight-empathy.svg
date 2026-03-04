@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="se1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#e9d8fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#se1)" rx="12"/>
+  <!-- Heart with balance beam -->
+  <path d="M200,170 C200,170 160,130 160,110 C160,90 180,80 200,100 C220,80 240,90 240,110 C240,130 200,170 200,170Z" fill="#805ad5" opacity="0.5"/>
+  <path d="M200,165 C200,165 170,135 170,118 C170,102 185,94 200,108 C215,94 230,102 230,118 C230,135 200,165 200,165Z" fill="#9f7aea" opacity="0.6"/>
+  <!-- Balance / scales -->
+  <line x1="130" y1="200" x2="270" y2="200" stroke="#805ad5" stroke-width="2.5" opacity="0.4"/>
+  <line x1="200" y1="175" x2="200" y2="200" stroke="#805ad5" stroke-width="2" opacity="0.4"/>
+  <circle cx="145" cy="210" r="20" fill="none" stroke="#9f7aea" stroke-width="2" opacity="0.4"/>
+  <circle cx="255" cy="210" r="20" fill="none" stroke="#9f7aea" stroke-width="2" opacity="0.4"/>
+  <!-- Decorative -->
+  <circle cx="80" cy="50" r="6" fill="#d6bcfa" opacity="0.5"/>
+  <circle cx="340" cy="70" r="4" fill="#b794f4" opacity="0.4"/>
+  <circle cx="60" cy="250" r="5" fill="#e9d8fd" opacity="0.6"/>
+  <circle cx="350" cy="260" r="3" fill="#d6bcfa" opacity="0.4"/>
+  <text x="200" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="16" font-weight="600" fill="#553c9a">Empathy with Standards</text>
+</svg>
