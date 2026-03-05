@@ -1,8 +1,7 @@
 interface PhotoImage {
   src: string
   alt: string
-  name?: string
-  designation?: string
+  quote?: string
 }
 
 interface PhotoBannerProps {
@@ -15,10 +14,9 @@ export default function PhotoBanner({ images }: PhotoBannerProps) {
       {images.map((img, i) => (
         <div key={i} className="photo-frame">
           <img src={img.src} alt={img.alt} className="photo-img" />
-          {img.name && (
+          {img.quote && (
             <div className="photo-caption">
-              <span className="photo-name">{img.name}</span>
-              {img.designation && <span className="photo-designation">{img.designation}</span>}
+              <span className="photo-quote">{img.quote}</span>
             </div>
           )}
         </div>

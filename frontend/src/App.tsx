@@ -57,16 +57,16 @@ function App() {
       <div ref={printRef} className="main-content">
         <Hero />
         <PhotoBanner images={[
-          { src: '/Photo1.jpg', alt: 'Geetha Narayanan', name: 'Geetha Narayanan', designation: 'Chief Technology Officer, CREK ODR' },
-          { src: '/photo2.svg', alt: 'Team photo 2' },
+          { src: '/Photo1.jpg', alt: 'Geetha Narayanan', quote: '"Here\'s to the women who lead, inspire, and make the impossible look effortless."' },
+          { src: '/photo2.svg', alt: 'Team photo 2', quote: '"When women rise, the world rises with them."' },
         ]} />
         <Spotlight />
         <Impact />
         <Gratitude onMessageSaved={fetchMessages} />
 
         <PhotoBanner images={[
-          { src: '/photo3.png', alt: 'Chittu Nagarajan, Founder, CREK ODR' },
-          { src: '/photo4.svg', alt: 'Celebration photo 2' },
+          { src: '/photo3.png', alt: 'Chittu Nagarajan', quote: '"Behind every successful journey is a woman who dared to begin."' },
+          { src: '/photo4.jpg', alt: 'Leader photo', quote: '"Strength, grace, and purpose — the pillars of every woman who leads."' },
         ]} />
         <Wishes messages={messages} onRefresh={fetchMessages} />
         <Footer />
