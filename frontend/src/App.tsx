@@ -9,6 +9,7 @@ import Wishes from './components/Wishes'
 import Footer from './components/Footer'
 import PhotoBanner from './components/PhotoBanner'
 import CelebrationOverlay from './components/CelebrationOverlay'
+import MusicPlayer from './components/MusicPlayer'
 import { API_URL } from './config'
 import './App.css'
 
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <div className="app">
+      <MusicPlayer />
       {celebrating && <CelebrationOverlay />}
       <Navbar onPrint={handlePrint} onCelebrate={handleCelebrate} />
       <div ref={printRef} className="main-content">
