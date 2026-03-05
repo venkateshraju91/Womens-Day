@@ -58,7 +58,7 @@ function App() {
         <Hero />
         <PhotoBanner images={[
           { src: '/Photo1.jpg', alt: 'Geetha Narayanan', quote: '"Here\'s to the women who lead, inspire, and make the impossible look effortless."' },
-          { src: '/photo2.svg', alt: 'Team photo 2', quote: '"When women rise, the world rises with them."' },
+          { src: '/photo2.png', alt: 'Leader photo 2', quote: '"When women rise, the world rises with them."' },
         ]} />
         <Spotlight />
         <Impact />
