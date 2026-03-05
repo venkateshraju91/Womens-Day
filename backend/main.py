@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, field_validator
 from sqlalchemy.orm import Session
 
@@ -81,3 +84,18 @@ def delete_message(message_id: int, db: Session = Depends(get_db)):
     db.delete(msg)
     db.commit()
     return {"ok": True}
+
+
+# --- Serve the built React frontend ---
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+
+if STATIC_DIR.is_dir():
+    app.mount("/assets", StaticFiles(directory=STATIC_DIR / "assets"), name="assets")
+    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static-root")
+
+    @app.get("/{full_path:path}")
+    def serve_spa(full_path: str):
+        file = STATIC_DIR / full_path
+        if file.is_file():
+            return FileResponse(file)
+        return FileResponse(STATIC_DIR / "index.html")

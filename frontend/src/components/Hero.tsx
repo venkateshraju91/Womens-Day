@@ -1,10 +1,5 @@
 import { useState } from 'react'
 
-interface HeroProps {
-  managerName: string
-  setManagerName: (name: string) => void
-}
-
 const qualities = [
   {
     number: '01',
@@ -23,8 +18,7 @@ const qualities = [
   },
 ]
 
-export default function Hero({ managerName, setManagerName }: HeroProps) {
-  const displayName = managerName || '[Manager Name]'
+export default function Hero() {
   const [flipped, setFlipped] = useState<boolean[]>([false, false, false])
 
   const toggleFlip = (index: number) => {
@@ -36,10 +30,10 @@ export default function Hero({ managerName, setManagerName }: HeroProps) {
       <div className="hero-main">
         <div className="hero-card">
           <div className="hero-badge">
-            International Women's Day &bull; 04 Mar 2026
+            International Women's Day &bull; 08 Mar 2026
           </div>
           <h1 className="hero-title">
-            Happy Women's Day, <span className="highlight-name">{displayName}</span>
+            Happy Women's Day, CREK Leaders!
           </h1>
           <p className="hero-description">
             Thank you for leading with clarity, care, and consistency. Your leadership
@@ -75,21 +69,6 @@ export default function Hero({ managerName, setManagerName }: HeroProps) {
         </div>
       </div>
       <div className="hero-sidebar">
-        <div className="appreciation-card">
-          <h3>Short Appreciation Note</h3>
-          <p>
-            Your guidance and trust make it easier to take ownership and deliver confidently.
-            Thank you for setting a high bar while still making space for growth.
-          </p>
-          <label className="input-label">Personalize name</label>
-          <input
-            type="text"
-            placeholder="Type manager name (e.g., Priya)"
-            value={managerName}
-            onChange={(e) => setManagerName(e.target.value)}
-            className="input-field"
-          />
-        </div>
       </div>
     </section>
   )

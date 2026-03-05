@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import Spotlight from './components/Spotlight'
 import Impact from './components/Impact'
 import Gratitude from './components/Gratitude'
-import Commitment from './components/Commitment'
+
 import Wishes from './components/Wishes'
 import Footer from './components/Footer'
 import PhotoBanner from './components/PhotoBanner'
@@ -20,8 +20,8 @@ interface WishMessage {
 }
 
 function App() {
-  const [managerName, setManagerName] = useState('')
-  const [yourName, setYourName] = useState('')
+
+
   const [celebrating, setCelebrating] = useState(false)
   const [messages, setMessages] = useState<WishMessage[]>([])
   const printRef = useRef<HTMLDivElement>(null)
@@ -55,17 +55,17 @@ function App() {
       {celebrating && <CelebrationOverlay />}
       <Navbar onPrint={handlePrint} onCelebrate={handleCelebrate} />
       <div ref={printRef} className="main-content">
-        <Hero managerName={managerName} setManagerName={setManagerName} />
+        <Hero />
         <PhotoBanner images={[
-          { src: '/photo1.svg', alt: 'Team photo 1' },
+          { src: '/Photo1.jpg', alt: 'Geetha Narayanan', name: 'Geetha Narayanan', designation: 'Chief Technology Officer, CREK ODR' },
           { src: '/photo2.svg', alt: 'Team photo 2' },
         ]} />
         <Spotlight />
         <Impact />
         <Gratitude onMessageSaved={fetchMessages} />
-        <Commitment yourName={yourName} setYourName={setYourName} />
+
         <PhotoBanner images={[
-          { src: '/photo3.svg', alt: 'Celebration photo 1' },
+          { src: '/photo3.png', alt: 'Chittu Nagarajan, Founder, CREK ODR' },
           { src: '/photo4.svg', alt: 'Celebration photo 2' },
         ]} />
         <Wishes messages={messages} onRefresh={fetchMessages} />

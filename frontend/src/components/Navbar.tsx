@@ -21,7 +21,6 @@ export default function Navbar({ onPrint, onCelebrate }: NavbarProps) {
         <button onClick={() => scrollTo('spotlight')}>Spotlight</button>
         <button onClick={() => scrollTo('impact')}>Impact</button>
         <button onClick={() => scrollTo('gratitude')}>Gratitude</button>
-        <button onClick={() => scrollTo('commitment')}>Commitment</button>
         <button onClick={() => scrollTo('wishes')}>Wishes</button>
       </div>
       <div className="navbar-actions">
